@@ -47,7 +47,7 @@ window.onload=function(){
 			success: function (result) {
 				var resultHtml = $("<div class=\"resultDiv\" id=\"movie-results\">");
                 for (var i = 0; i < result["results"].length; i++) {
-                    var image = result["results"][i]["poster_path"] == null ? "https://lh3.googleusercontent.com/proxy/W73-1oh2UJ7f62LXWENvZjNks8DSCHEBxZBHocsv12Afek8g6_gFTCTa8J8q50X6ZC7eI1lzZcC3S-hTopxUC5f2oSH0Bnfg9rA" : "https://image.tmdb.org/t/p/w500/" + result["results"][i]["poster_path"];  
+                    var image = result["results"][i]["poster_path"] == null ? "https://upload.wikimedia.org/wikipedia/en/6/60/No_Picture.jpg" : "https://image.tmdb.org/t/p/w500/" + result["results"][i]["poster_path"];  
                     resultHtml.append("<div class=\"result\" resourceId=\"" + result["results"][i]["id"] + "\">" + "<input type=\"image\" id=\"" + result["results"][i]["id"] + "\" src=\"" + image + "\" />" + "<p>" + result["results"][i]["original_title"] + "</p></div>")
                 }
                 resultHtml.append("</div>");
